@@ -1,343 +1,192 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Souss | Premium Moroccan Luxury Oils</title>
-    
-    <!-- Fonts: Playfair Display (Serif) & Montserrat (Sans) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velvet Souss | Premium Moroccan Oils</title>
 
-    <style>
-        :root {
-            --gold: #D4AF37;
-            --gold-light: #F3E5AB;
-            --gold-dark: #AA8C2C;
-            --black: #050505;
-            --dark-grey: #121212;
-            --white: #F9F9F9;
-            --font-serif: 'Playfair Display', 'Amiri', serif;
-            --font-sans: 'Montserrat', sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        body {
-            background-color: var(--black);
-            color: var(--white);
-            font-family: var(--font-sans);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
 
-        /* RTL Support */
-        html[dir="rtl"] {
-            direction: rtl;
-        }
-        
-        html[dir="rtl"] .font-serif {
-            font-family: 'Amiri', serif;
-        }
+header{
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
 
-        /* --- Animations --- */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:24px;
+    font-weight:700;
+    color:#d4af37;
+    letter-spacing:2px;
+}
 
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:14px;
+    transition:0.3s;
+}
 
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
+nav a:hover{
+    color:#d4af37;
+}
 
-        /* --- Typography --- */
-        h1, h2, h3 {
-            font-family: var(--font-serif);
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
+.hero{
+    height:100vh;
+    background:url('YOUR_IMAGE_URL_HERE') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
 
-        .text-gold { color: var(--gold); }
-        .text-center { text-align: center; }
-        
-        /* --- Decorative Pattern --- */
-        .pattern-border {
-            height: 20px;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='10' viewBox='0 0 60 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v1H0zM30 0l15 10H15L0 0z' fill='%23D4AF37' fill-opacity='0.2'/%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-            opacity: 0.6;
-            margin: 2rem 0;
-        }
+.hero-content{
+    background:rgba(0,0,0,0.6);
+    padding:50px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
 
-        /* --- Buttons --- */
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            text-decoration: none;
-            transition: all 0.4s ease;
-            background: transparent;
-            cursor: pointer;
-        }
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:50px;
+    margin-bottom:20px;
+    color:#d4af37;
+}
 
-        .btn:hover {
-            background: var(--gold);
-            color: var(--black);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
+.hero p{
+    font-size:18px;
+    margin-bottom:30px;
+    max-width:600px;
+}
 
-        .btn-small {
-            padding: 10px 25px;
-            font-size: 0.7rem;
-        }
+.btn{
+    background:#d4af37;
+    padding:15px 40px;
+    border:none;
+    border-radius:30px;
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-        /* --- Header --- */
-        header {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            padding: 20px 50px;
-            z-index: 10;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.btn:hover{
+    background:white;
+}
 
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            color: var(--white);
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        
-        .lang-switch {
-            color: var(--gold);
-            cursor: pointer;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+section{
+    padding:100px 8%;
+    text-align:center;
+}
 
-        /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            width: 100%;
-            /* Placeholder image - Replace with your actual image */
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), var(--black)), url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
+.section-title{
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:50px;
+    color:#d4af37;
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:40px;
+}
 
-        .hero p.tagline {
-            font-size: 1.2rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--gold-light);
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
+.product{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+}
 
-        /* --- Products --- */
-        .products {
-            padding: 100px 5%;
-            background: var(--black);
-        }
+.product:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(212,175,55,0.3);
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+.product h3{
+    margin-bottom:15px;
+    color:#d4af37;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .product-card {
-            background: var(--dark-grey);
-            border: 1px solid #222;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold-dark);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            margin-bottom: 20px;
-            /* Placeholder for product images */
-            background-color: #1a1a1a; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-        }
-        
-        /* Using FontAwesome as placeholders for product images to look nice immediately */
-        .product-img i { font-size: 4rem; color: #333; }
-
-        .product-name {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--white);
-        }
-
-        .product-desc {
-            font-size: 0.9rem;
-            color: #aaa;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            display: block;
-            color: var(--gold);
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-family: var(--font-serif);
-        }
-
-        /* --- Benefits --- */
-        .benefits {
-            padding: 80px 20px;
-            background: #0f0f0f;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
-
-        .benefits-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 50px;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .benefit-item i {
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .benefit-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .benefit-item p {
-            font-size: 0.9rem;
-            color: #888;
-            max-width: 250px;
-        }
-
-        /* --- Limited Offer --- */
-        .offer {
-            padding: 100px 20px;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1550607357-364653478c22?q=80&w=1920&auto=format&fit=crop');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .offer h2 {
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-
-        /* --- Footer --- */
-        footer {
-            padding: 50px 20px;
-            text-align: center;
-            border-top: 1px solid #222;
-            font-size: 0.8rem;
-            color: #666;
-        }
-
-        /* --- WhatsApp CTA --- */
-        .wa-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 30px;
-            right: 30px; /* Default LTR */
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        html[dir="rtl"] .wa-float {
-            left: 30px;
-            right: auto;
-        }
-
-        .wa-float:hover {
-            background-color: #20b857;
-            transform: scale(1.1);
-        }
-
-        /* --- Mobile Responsive --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .hero p.tagline { font-size: 0.9rem; }
-            .product-grid { grid-template-columns: 1fr; }
-            header { padding: 20px; }
-            .offer h2 { font-size: 2rem; }
-        }
-    </style>
+footer{
+    padding:40px;
+    background:#000;
+    text-align:center;
+    font-size:14px;
+    color:#aaa;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Header
+<header>
+<div class="logo">VELVET SOUSS</div>
+<nav>
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Premium Moroccan Oils</h1>
+<p>Luxury cold-pressed oils crafted in Morocco. 100% pure, natural, and globally trusted for beauty & wellness.</p>
+<button class="btn">Order Now</button>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Our Collection</h2>
+<div class="products">
+<div class="product">
+<h3>Argan Oil</h3>
+<p>Deep hydration and anti-aging care for skin & hair.</p>
+</div>
+<div class="product">
+<h3>Prickly Pear Oil</h3>
+<p>Luxury anti-wrinkle oil rich in antioxidants.</p>
+</div>
+<div class="product">
+<h3>Carob Seed Oil</h3>
+<p>Natural nourishment with Moroccan heritage.</p>
+</div>
+<div class="product">
+<h3>Saffron Oil</h3>
+<p>Brightening and revitalizing premium extract.</p>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 Velvet Souss. Made in Morocco. All Rights Reserved.
+</footer>
+
+</body>
+</html>
